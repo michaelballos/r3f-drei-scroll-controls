@@ -1,28 +1,37 @@
 import { useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { ScrollControls } from '@react-three/drei'
+import { useScroll, ScrollControls, Scroll } from '@react-three/drei'
 
 const Capsule = () => {
   const mesh = useRef()
-  useFrame(() => {
-    mesh.current.rotation.x = mesh.current.rotation.y += 0.01
-    mesh.current.rotation.x = mesh.current.rotation.z += 0.005
-  })
 
   return (
-    <mesh ref={mesh}>
-      <octahedronGeometry attach='geometry' args={[1, 3, 52]} />
-      <meshLambertMaterial attach='material' color='lightblue' />
-    </mesh>
+    <Scroll>
+      <mesh ref={mesh}>
+        <capsuleGeometry attach='geometry' args={[1, 3, 32]} />
+        <meshLambertMaterial wireframe attach='material' color='white' />
+      </mesh>
+    </Scroll>
   )
 }
 
 const Lighting = () => {
   return (
     <>
-      <ambientLight intensity={0.3} />
-      <pointLight position={[0, -7, 2]} intensity={15} />
+      <ambientLight intensity={0.5} />
+      <pointLight position={[0, -3, 4]} intensity={0.5} />
     </>
+  )
+}
+
+const HtmlText = () => {
+  return (
+    <Scroll html>
+      <div className='textContainer'>
+        <p className='pageOne'>This is the first page</p>
+        <p className='pageTwo'>This is the second page</p>
+      </div>
+    </Scroll>
   )
 }
 
@@ -37,6 +46,9 @@ const Scene = () => {
     >
       <Lighting />
       <Capsule />
+      <ScrollControls pages={2}>
+        <HtmlText />
+      </ScrollControls>
     </Canvas>
   )
 }
