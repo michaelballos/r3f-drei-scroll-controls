@@ -6,7 +6,7 @@ const Capsule = () => {
   const mesh = useRef()
   const data = useScroll()
   useFrame(() => {
-    mesh.current.position.y = data.range(0, 1 / 3) * 1
+    mesh.current.position.y = data.range(0, 4 / 4) * -5
   })
 
   return (
@@ -31,12 +31,12 @@ const HtmlText = () => {
     <Scroll html>
       <div
         style={{
-          height: '300vh',
+          height: '200vh',
           width: '100vw',
           display: 'flex',
           alignSelf: 'center',
           flexDirection: 'column',
-          justifyContent: 'space-around',
+          justifyContent: 'space-between',
         }}
         className='textContainer'
       >
@@ -57,7 +57,7 @@ const Scene = () => {
     >
       <Lighting />
       <gridHelper />
-      <ScrollControls pages={3}>
+      <ScrollControls pages={4}>
         <Capsule />
         <HtmlText />
       </ScrollControls>
