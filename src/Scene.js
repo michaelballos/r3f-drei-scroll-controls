@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { useScroll, ScrollControls, Scroll } from '@react-three/drei'
 import { useSpring, a } from 'react-spring'
@@ -6,21 +6,11 @@ import { useSpring, a } from 'react-spring'
 const Capsule = () => {
   const mesh = useRef()
   const data = useScroll()
-  const [positionY, setPositionY] = useState(200)
-  const [scroll, setScroll] = useState(0)
-  const [rotationZ, setRotationZ] = useState(0)
 
   useFrame(() => {
-    // set position y state as 200
-    setPositionY((mesh.current.position.y = positionY))
-    // set data scroll position
-    setScroll(data.scroll.current + scroll)
-
-    if (scroll > 0) {
-      mesh.current.position.y = positionY - data.scroll.current * 635
-    }
-    if (data.scroll.current > 1) {
-      mesh.current.rotation.z = data.scroll.current * 635
+    mesh.current.position.y = 500
+    if (data.scroll.current > 0) {
+      mesh.current.position.y = 500 - data.scroll.current * 800
     }
   })
   return (
