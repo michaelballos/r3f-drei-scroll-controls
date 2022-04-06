@@ -1,17 +1,21 @@
 import { useRef } from 'react'
-import { Canvas, useFrame, gridHelper } from '@react-three/fiber'
+import { Canvas, useFrame } from '@react-three/fiber'
 import { useScroll, ScrollControls, Scroll } from '@react-three/drei'
+import { useSpring, a } from 'react-spring'
 
 const Capsule = () => {
   const mesh = useRef()
   const data = useScroll()
-  useFrame(() => {
-    mesh.current.position.y = data.range(0, 4 / 4) * -5
-  })
 
+  useFrame(() => {
+    const a = (mesh.current.position.y = 200)
+    if (data.scroll.current > 0.01) {
+      mesh.current.position.y = a - data.scroll.current * 635
+    }
+  })
   return (
     <mesh ref={mesh}>
-      <capsuleGeometry attach='geometry' args={[1, 3, 32]} />
+      <capsuleGeometry attach='geometry' args={[1, 3, 5]} />
       <meshLambertMaterial wireframe attach='material' color='white' />
     </mesh>
   )
@@ -31,10 +35,9 @@ const HtmlText = () => {
     <Scroll html>
       <div
         style={{
-          height: '200vh',
+          height: '400vh',
           width: '100vw',
           display: 'flex',
-          alignSelf: 'center',
           flexDirection: 'column',
           justifyContent: 'space-between',
         }}
@@ -42,6 +45,8 @@ const HtmlText = () => {
       >
         <p className='pageOne'>This is the first page</p>
         <p className='pageTwo'>This is the second page</p>
+        <p className='pageTwo'>This is the third page</p>
+        <p className='pageTwo'>This is the fourth page</p>
       </div>
     </Scroll>
   )
@@ -51,7 +56,7 @@ const Scene = () => {
   return (
     <Canvas
       camera={{
-        position: [0, 5, 10],
+        position: [0, -15, 0],
         fov: 60,
       }}
     >
