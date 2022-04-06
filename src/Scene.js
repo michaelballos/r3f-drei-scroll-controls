@@ -8,9 +8,11 @@ const Capsule = () => {
   const data = useScroll()
 
   useFrame(() => {
-    mesh.current.position.y = 500
-    if (data.scroll.current > 0) {
-      mesh.current.position.y = 500 - data.scroll.current * 800
+    if (mesh.current.position.y > -9) {
+      mesh.current.position.y = 500
+      mesh.current.position.y = 500 - data.scroll.current * 1525
+    } else if (mesh.current.position.y === -10) {
+      mesh.current.position.y = -10
     }
   })
   return (
