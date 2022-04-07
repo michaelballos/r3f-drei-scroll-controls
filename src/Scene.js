@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { useScroll, ScrollControls, Scroll } from '@react-three/drei'
+import { useScroll, ScrollControls, Scroll, Text } from '@react-three/drei'
 import { useSpring, a } from 'react-spring'
 
 const Capsule = () => {
@@ -8,11 +8,11 @@ const Capsule = () => {
   const data = useScroll()
 
   useFrame(() => {
-    if (mesh.current.position.y > -9) {
+    if (data.scroll.current >= 0) {
       mesh.current.position.y = 500
-      mesh.current.position.y = 500 - data.scroll.current * 1525
-    } else if (mesh.current.position.y === -10) {
-      mesh.current.position.y = -10
+      mesh.current.position.y = 500 - data.range(0, 1 / 4) * 509.35
+    } else if (data.scroll.current < 500) {
+      mesh.current.position.y = -5
     }
   })
   return (
