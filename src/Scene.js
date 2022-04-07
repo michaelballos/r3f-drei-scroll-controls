@@ -45,7 +45,7 @@ const HtmlText = () => {
         }}
         className='textContainer'
       >
-        <p className='pageOne'>This is the first page</p>
+        <p className='pageOne'>Designed By Ballos</p>
         <p className='pageTwo'>This is the second page</p>
         <p className='pageTwo'>This is the third page</p>
         <p className='pageTwo'>This is the fourth page</p>

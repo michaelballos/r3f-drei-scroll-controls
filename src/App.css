@@ -9,3 +9,9 @@ p {
     color: white;
     font-size: 5vw;
 }
+
+@media (max-width: 600px) {
+    p {
+        font-size: 10vw;
+    }
+}
