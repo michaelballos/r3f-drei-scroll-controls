@@ -65,7 +65,7 @@ const HtmlText = () => {
             Enhanced
           </p>
         </div>
-        <p className='pageFour'>And Altered Or Enhanced </p>
+        <p className='pageFour'>Altered</p>
         <p className='pageFive'>This is the fifth page</p>
         <p className='pageSix'>This is the sixth page</p>
         <p className='pageSeven'>This is the seventh page</p>

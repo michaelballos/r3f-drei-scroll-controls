@@ -15,17 +15,9 @@ span {
     font-size: 5vw;
 }
 
-p {
-    margin-left: 23vw;
-    width: 65vw;
-}
-
-.pageOne {
-    width: 100vw;
-    margin: 0;
-}
-
 .pageTwo {
+    width: 65vw;
+    margin-left: 23vw;
     margin-left: 17vw;
 }
 
@@ -42,11 +34,12 @@ p {
 
 .pageThree {
     display: flex;
-    width: 65vw;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
     font-size: 9vw;
+    width: 65vw;
+    margin-left: 23vw;
 }
 
 @media (max-width: 600px) {
