@@ -16,9 +16,12 @@ const Capsule = () => {
     // starting position
     mesh.current.position.y = 500
     // pulls capsule towards camera
-    mesh.current.position.y = 500 - data.range(0, 1 / 4) * 509.35
+    mesh.current.position.y = 500 - data.range(0, 1 / 8) * 509.35
     //rotates capsule
-    mesh.current.rotation.y = data.range(2 / 4, 2 / 2) * 10
+    mesh.current.rotation.y = data.range(1 / 8, 2 / 8) * 5
+    // moves capsule away and rotates it
+    mesh.current.position.y += data.range(1.5 / 8, 1 / 8) * 9
+    mesh.current.rotation.x = data.range(1.5 / 8, 1 / 8) * 2
   })
 
   return (
@@ -43,7 +46,7 @@ const HtmlText = () => {
     <Scroll className='scrollArea' html>
       <div
         style={{
-          height: '400vh',
+          height: '800vh',
           width: '100vw',
           display: 'flex',
           flexDirection: 'column',
@@ -52,9 +55,13 @@ const HtmlText = () => {
         className='textContainer'
       >
         <p className='pageOne'>Designed By Ballos</p>
-        <p className='pageTwo'>Perception Is Everything</p>
-        <p className='pageThree'>This is the third page</p>
-        <p className='pageFour'>This is the fourth page</p>
+        <p className='pageTwo'>Our Mind Is A Powerful Tool</p>
+        <p className='pageThree'>Easily Broken Or Enhanced</p>
+        <p className='pageFour'>And Altered Or Enhanced </p>
+        <p className='pageFive'>This is the fifth page</p>
+        <p className='pageSix'>This is the sixth page</p>
+        <p className='pageSeven'>This is the seventh page</p>
+        <p className='pageEight'>This is the eigth page</p>
       </div>
     </Scroll>
   )
@@ -70,7 +77,7 @@ const Scene = () => {
     >
       <Lighting />
       <gridHelper />
-      <ScrollControls pages={4}>
+      <ScrollControls pages={8}>
         <Capsule />
         <HtmlText />
       </ScrollControls>

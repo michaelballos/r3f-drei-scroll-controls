@@ -16,6 +16,10 @@ p {
 
 @media (max-width: 600px) {
     p {
-        font-size: 9vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 6vw;
     }
 }
