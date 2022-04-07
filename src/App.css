@@ -63,14 +63,13 @@ span {
     }
     .spanTwo {
         font-size: 25vw;
+        padding-right: 5vw;
     }
     .spanThree {
         color: red;
         font-size: 25vw;
     }
     .pageThree {
-        display: flex;
-        flex-direction: column;
-        font-size: 24vw;
+        font-size: 22vw;
     }
 }
