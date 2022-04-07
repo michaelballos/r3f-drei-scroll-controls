@@ -55,8 +55,16 @@ const HtmlText = () => {
         className='textContainer'
       >
         <p className='pageOne'>Designed By Ballos</p>
-        <p className='pageTwo'>Our Mind Is A Powerful Tool</p>
-        <p className='pageThree'>Easily Broken Or Enhanced</p>
+        <p className='pageTwo'>
+          Our
+          <span className='spanTwo'>Mind</span>
+          Is A Powerful Tool
+        </p>
+        <div className='pageThreeDiv'>
+          <p className='pageThree'>
+            Easily <span className='spanThree'>Broken</span> Or Enhanced
+          </p>
+        </div>
         <p className='pageFour'>And Altered Or Enhanced </p>
         <p className='pageFive'>This is the fifth page</p>
         <p className='pageSix'>This is the sixth page</p>

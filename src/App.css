@@ -6,7 +6,8 @@
     height: 400vh;
 }
 
-p {
+p,
+span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,12 +15,39 @@ p {
     font-size: 5vw;
 }
 
+.spanTwo {
+    color: rgb(0, 200, 255);
+}
+
 @media (max-width: 600px) {
-    p {
+    p,
+    span {
         display: flex;
         align-items: center;
         justify-content: center;
         color: white;
-        font-size: 6vw;
+        font-size: 9vw;
+    }
+    .pageTwo {
+        display: flex;
+        width: 95vw;
+        justify-content: space-around;
+        margin-left: 2vw;
+        align-items: center;
+        color: rgb(255, 255, 255);
+    }
+    .pageThree {
+        width: 95vw;
+    }
+    .pageThreeDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 0.4vw;
+        align-items: center;
+        color: rgb(255, 255, 255);
+    }
+    .spanThree {
+        color: red;
     }
 }
