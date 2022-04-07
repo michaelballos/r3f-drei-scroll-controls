@@ -42,6 +42,10 @@ span {
     margin-left: 23vw;
 }
 
+.pageFour {
+    font-size: 15vw;
+}
+
 @media (max-width: 600px) {
     p,
     span {

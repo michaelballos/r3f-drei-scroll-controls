@@ -17,9 +17,9 @@ const Capsule = () => {
     mesh.current.position.y = 500
     // pulls capsule towards camera
     mesh.current.position.y = 500 - data.range(0, 1 / 8) * 509.35
-    //rotates capsule
-    mesh.current.rotation.y = data.range(1 / 8, 2 / 8) * 5
-    // moves capsule away and rotates it
+    // rotates capsule y
+    mesh.current.rotation.y = data.range(1 / 8, 3 / 8) * 5
+    // moves capsule away and rotates z
     mesh.current.position.y += data.range(1.5 / 8, 1 / 8) * 9
     mesh.current.rotation.x = data.range(1.5 / 8, 1 / 8) * 2
   })
