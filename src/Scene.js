@@ -10,7 +10,6 @@ import {
   UseLoader,
   OrbitControls,
 } from '@react-three/drei'
-import Model from './Model'
 
 const Capsule = () => {
   const mesh = useRef()
