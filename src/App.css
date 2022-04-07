@@ -15,13 +15,38 @@ span {
     font-size: 5vw;
 }
 
-.spanTwo {
-    color: rgb(0, 200, 255);
+p {
+    margin-left: 23vw;
+    width: 65vw;
+}
+
+.pageOne {
+    width: 100vw;
+    margin: 0;
 }
 
 .pageTwo {
-    margin-left: 23vw;
-    width: 55vw;
+    margin-left: 17vw;
+}
+
+.spanTwo {
+    color: rgb(0, 200, 255);
+    font-size: 20vw;
+    padding-right: 20vh;
+}
+
+.spanThree {
+    color: rgb(255, 0, 0);
+    font-size: 17vw;
+}
+
+.pageThree {
+    display: flex;
+    width: 65vw;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 9vw;
 }
 
 @media (max-width: 600px) {
@@ -31,26 +56,24 @@ span {
         align-items: center;
         justify-content: center;
         color: white;
-        font-size: 9vw;
+        font-size: 8vw;
     }
-    .pageTwo {
-        width: 80vw;
-        margin-left: 10vw;
-        align-items: center;
-        color: rgb(255, 255, 255);
-    }
-    .pageThree {
+    p {
         width: 95vw;
-    }
-    .pageThreeDiv {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-left: 0.4vw;
+        margin-left: 2.5vw;
         align-items: center;
         color: rgb(255, 255, 255);
+    }
+    .spanTwo {
+        font-size: 25vw;
     }
     .spanThree {
         color: red;
+        font-size: 25vw;
+    }
+    .pageThree {
+        display: flex;
+        flex-direction: column;
+        font-size: 24vw;
     }
 }

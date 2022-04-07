@@ -56,13 +56,13 @@ const HtmlText = () => {
       >
         <p className='pageOne'>Designed By Ballos</p>
         <p className='pageTwo'>
-          Our
           <span className='spanTwo'>Mind</span>
           Is A Powerful Tool
         </p>
         <div className='pageThreeDiv'>
           <p className='pageThree'>
-            Easily <span className='spanThree'>Broken</span> Or Enhanced
+            <span className='spanThree'>Broken</span>
+            Enhanced
           </p>
         </div>
         <p className='pageFour'>And Altered Or Enhanced </p>
