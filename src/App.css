@@ -2,6 +2,10 @@
     background-color: black;
 }
 
+.scrollArea {
+    height: 400vh;
+}
+
 p {
     display: flex;
     align-items: center;
@@ -12,6 +16,6 @@ p {
 
 @media (max-width: 600px) {
     p {
-        font-size: 10vw;
+        font-size: 9vw;
     }
 }

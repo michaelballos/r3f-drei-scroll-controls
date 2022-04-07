@@ -6,15 +6,21 @@ import { useSpring, a } from 'react-spring'
 const Capsule = () => {
   const mesh = useRef()
   const data = useScroll()
+  /** 
+  const {
+    key(limit): value (func)
+*/
 
   useFrame(() => {
-    if (data.scroll.current >= 0) {
-      mesh.current.position.y = 500
-      mesh.current.position.y = 500 - data.range(0, 1 / 4) * 509.35
-    } else if (data.scroll.current < 500) {
-      mesh.current.position.y = -5
-    }
+    console.log(data.scroll.current)
+    // starting position
+    mesh.current.position.y = 500
+    // pulls capsule towards camera
+    mesh.current.position.y = 500 - data.range(0, 1 / 4) * 509.35
+    //rotates capsule
+    mesh.current.rotation.y = data.range(2 / 4, 2 / 2) * 10
   })
+
   return (
     <mesh ref={mesh}>
       <capsuleGeometry attach='geometry' args={[1, 3, 5]} />
@@ -34,7 +40,7 @@ const Lighting = () => {
 
 const HtmlText = () => {
   return (
-    <Scroll html>
+    <Scroll className='scrollArea' html>
       <div
         style={{
           height: '400vh',
@@ -46,9 +52,9 @@ const HtmlText = () => {
         className='textContainer'
       >
         <p className='pageOne'>Designed By Ballos</p>
-        <p className='pageTwo'>This is the second page</p>
-        <p className='pageTwo'>This is the third page</p>
-        <p className='pageTwo'>This is the fourth page</p>
+        <p className='pageTwo'>Perception Is Everything</p>
+        <p className='pageThree'>This is the third page</p>
+        <p className='pageFour'>This is the fourth page</p>
       </div>
     </Scroll>
   )
