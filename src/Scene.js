@@ -25,9 +25,9 @@ const Capsule = () => {
     // starting position
     mesh.current.position.y = 500
     // pulls capsule towards camera
-    mesh.current.position.y = 500 - data.range(0, 1 / 8) * 509.35
+    mesh.current.position.y = 500 - data.range(0, 0.5 / 8) * 509.35
     // rotates capsule y
-    mesh.current.rotation.y = data.range(1 / 8, 5 / 8) * 19
+    mesh.current.rotation.y = data.range(0.5 / 8, 5 / 8) * 19
     // moves capsule away and starts z rotate
     mesh.current.position.y += data.range(1.5 / 8, 1 / 8) * 7
     mesh.current.rotation.x = data.range(1.5 / 8, 1 / 8) * 5
@@ -96,16 +96,13 @@ const Scene = () => {
         fov: 60,
       }}
     >
-      <OrbitControls />
       <Lighting />
-      <Model />
+      <ScrollControls pages={8}>
+        <Capsule />
+        <HtmlText />
+      </ScrollControls>
     </Canvas>
   )
 }
 
 export default Scene
-/********<ScrollControls pages={8}>
-        <Capsule />
-        <HtmlText />
-      </ScrollControls>
- */
