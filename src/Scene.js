@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { useScroll, ScrollControls, Scroll, Text } from '@react-three/drei'
+import { useScroll, ScrollControls, Scroll, Stars } from '@react-three/drei'
 import { useSpring, a } from 'react-spring'
 
 const Capsule = () => {
@@ -35,8 +35,8 @@ const Capsule = () => {
 const Lighting = () => {
   return (
     <>
-      <ambientLight intensity={0.5} />
-      <pointLight position={[0, -3, 4]} intensity={0.5} />
+      <ambientLight intensity={0.01} />
+      <pointLight position={[4, -30, 1]} intensity={0.8} />
     </>
   )
 }
