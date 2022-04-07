@@ -1,7 +1,16 @@
-import { useRef } from 'react'
+import { Suspense, useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { useScroll, ScrollControls, Scroll, Stars } from '@react-three/drei'
-import { useSpring, a } from 'react-spring'
+import {
+  useScroll,
+  useAnimations,
+  useGLTF,
+  ScrollControls,
+  Scroll,
+  GLTFLoader,
+  UseLoader,
+  OrbitControls,
+} from '@react-three/drei'
+import Model from './Model'
 
 const Capsule = () => {
   const mesh = useRef()
@@ -87,13 +96,16 @@ const Scene = () => {
         fov: 60,
       }}
     >
+      <OrbitControls />
       <Lighting />
-      <ScrollControls pages={8}>
-        <Capsule />
-        <HtmlText />
-      </ScrollControls>
+      <Model />
     </Canvas>
   )
 }
 
 export default Scene
+/********<ScrollControls pages={8}>
+        <Capsule />
+        <HtmlText />
+      </ScrollControls>
+ */

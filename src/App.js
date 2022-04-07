@@ -1,6 +1,9 @@
 import './App.css'
 import Scene from './Scene'
-import { useScroll, Scroll, ScrollControls } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import { Suspense, useRef } from 'react'
+import { GLTFLoader, useGLTF, useAnimations } from '@react-three/drei'
+import Model from './Model'
 
 function App() {
   return (
