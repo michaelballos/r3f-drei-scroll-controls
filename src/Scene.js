@@ -84,7 +84,6 @@ const Scene = () => {
       }}
     >
       <Lighting />
-      <gridHelper />
       <ScrollControls pages={8}>
         <Capsule />
         <HtmlText />
