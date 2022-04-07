@@ -23,12 +23,14 @@ span {
 
 .spanTwo {
     color: rgb(0, 200, 255);
+    font-weight: bold;
     font-size: 20vw;
     padding-right: 20vh;
 }
 
 .spanThree {
     color: rgb(255, 0, 0);
+    font-weight: bold;
     font-size: 17vw;
 }
 
@@ -63,13 +65,19 @@ span {
     }
     .spanTwo {
         font-size: 25vw;
+        font-weight: bold;
         padding-right: 5vw;
     }
     .spanThree {
         color: red;
+        font-weight: bold;
         font-size: 25vw;
     }
     .pageThree {
         font-size: 22vw;
+    }
+    .pageFour {
+        font-size: 22vw;
+        font-weight: bold;
     }
 }
